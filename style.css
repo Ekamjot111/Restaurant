@@ -45,21 +45,7 @@ nav a:hover {
 main {
     flex: 1;
     padding: 20px;
-}
-
-/* HERO */
-.hero {
     text-align: center;
-    padding: 60px;
-    background-color: #d4a373;
-    color: white;
-}
-
-/* ABOUT */
-.about {
-    text-align: center;
-    width: 60%;
-    margin: 20px auto;
 }
 
 /* CARD */
@@ -72,64 +58,34 @@ main {
     text-align: center;
 }
 
-/* CENTER TEXT */
-.center {
-    text-align: center;
+/* VIDEO LINK STYLES */
+.video-link {
+    text-decoration: none;
+    display: inline-block;
+    color: inherit; /* Keeps text color same as site */
 }
-
-/* FORM */
-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: auto;
-}
-
-input, textarea {
-    margin: 10px 0;
-    padding: 8px;
-}
-
-button {
-    background-color: #6b2d2d;
-    color: white;
-    padding: 10px;
-    border: none;
-}
-
-/* FOOTER */
-footer {
-    background-color: #6b2d2d;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-img {
-    display: block;      
-    width: 150px;     
-    margin: 10px auto;   
-    border-radius: 15px;   
-}
-
 
 /* IMAGE CONTAINER */
 .image-box {
-    position: relative;        /* allows overlay positioning */
+    position: relative;
     width: 250px;
     margin: 20px auto;
+    overflow: hidden; /* Keeps the zoom inside the box */
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 /* IMAGE */
 .image-box img {
     width: 100%;
+    display: block;
     border-radius: 15px;
-    transition: transform 0.3s ease; /* smooth zoom */
+    transition: transform 0.3s ease;
 }
 
 /* HOVER ZOOM */
 .image-box:hover img {
-    transform: scale(1.1); /* slightly bigger */
+    transform: scale(1.1);
 }
 
 /* TEXT OVERLAY */
@@ -138,16 +94,42 @@ img {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0,0,0,0.6); /* dark transparent */
+    background: rgba(107, 45, 45, 0.85); /* Matches header color but transparent */
     color: white;
     text-align: center;
-    padding: 10px;
-    opacity: 0; /* hidden */
+    padding: 15px;
+    opacity: 0;
     transition: 0.3s;
     border-radius: 0 0 15px 15px;
+    font-size: 14px;
 }
 
 /* SHOW TEXT ON HOVER */
 .image-box:hover .overlay {
     opacity: 1;
+}
+
+.menubutton, .learnbutton {
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.contactbutton {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+footer {
+    background-color: #6b2d2d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.mainimg{
+    width:400px;
 }

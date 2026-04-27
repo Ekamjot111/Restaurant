@@ -1,0 +1,153 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    background-color: #6b2d2d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* NAV */
+nav {
+    border-bottom: 2px solid #d4a373;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #d4a373;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px;
+    background-color: #d4a373;
+    color: white;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    width: 60%;
+    margin: 20px auto;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 15px;
+    margin: 15px auto;
+    width: 60%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* CENTER TEXT */
+.center {
+    text-align: center;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 8px;
+}
+
+button {
+    background-color: #6b2d2d;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    background-color: #6b2d2d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+img {
+    display: block;      
+    width: 150px;     
+    margin: 10px auto;   
+    border-radius: 15px;   
+}
+
+
+/* IMAGE CONTAINER */
+.image-box {
+    position: relative;        /* allows overlay positioning */
+    width: 250px;
+    margin: 20px auto;
+}
+
+/* IMAGE */
+.image-box img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease; /* smooth zoom */
+}
+
+/* HOVER ZOOM */
+.image-box:hover img {
+    transform: scale(1.1); /* slightly bigger */
+}
+
+/* TEXT OVERLAY */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6); /* dark transparent */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0; /* hidden */
+    transition: 0.3s;
+    border-radius: 0 0 15px 15px;
+}
+
+/* SHOW TEXT ON HOVER */
+.image-box:hover .overlay {
+    opacity: 1;
+}

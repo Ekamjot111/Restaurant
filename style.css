@@ -149,8 +149,15 @@ footer {
 
 /* 📱 RESPONSIVE */
 @media (max-width: 768px) {
+
     nav ul {
         flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        display: block;
+        padding: 8px 0;
     }
 
     .card {

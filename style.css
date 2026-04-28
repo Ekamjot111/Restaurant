@@ -79,13 +79,18 @@ main {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(107,45,45,0.8);
+    background: rgba(107,45,45,0.85);
     color: white;
     padding: 10px;
+
     opacity: 0;
     transition: 0.3s;
-    font-size: 13px;
+
+    font-size: 13px;        /* smaller text */
+    line-height: 1.4;       /* better spacing */
     text-align: center;
+
+    box-sizing: border-box; /* keeps padding inside */
 }
 
 .image-box:hover .overlay {
@@ -118,6 +123,30 @@ footer {
     padding: 15px;
 }
 
+.contactform {
+    margin: 20px auto;
+    width: 70%;
+}
+
+.contactinfo {
+    margin: 20px auto;
+    width: 60%;
+    text-align: center;
+}
+
+.card h3 {
+    color: #6b2d2d;
+}
+
+.card p {
+    margin: 5px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+}
+
 /* 📱 RESPONSIVE */
 @media (max-width: 768px) {
     nav ul {
@@ -135,15 +164,4 @@ footer {
     .image-box {
         width: 90%;
     }
-}
-
-.contactform {
-    margin: 20px auto;
-    width: 70%;
-}
-
-.contactinfo {
-    margin: 20px auto;
-    width: 60%;
-    text-align: center;
 }

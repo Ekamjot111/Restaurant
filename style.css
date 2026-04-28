@@ -10,7 +10,6 @@ body {
     flex-direction: column;
 }
 
-/* HEADER */
 header {
     background-color: #6b2d2d;
     color: white;
@@ -18,7 +17,6 @@ header {
     padding: 15px;
 }
 
-/* NAV */
 nav {
     border-bottom: 2px solid #d4a373;
 }
@@ -28,7 +26,6 @@ nav ul {
     justify-content: center;
     list-style: none;
     padding: 0;
-    margin: 10px 0;
 }
 
 nav a {
@@ -41,87 +38,77 @@ nav a:hover {
     color: #d4a373;
 }
 
-/* MAIN */
 main {
     flex: 1;
     padding: 20px;
     text-align: center;
 }
 
-/* CARD */
+.hero {
+    background-color: #d4a373;
+    color: white;
+    padding: 40px;
+}
+
 .card {
-    background: white;
-    padding: 15px;
-    margin: 15px auto;
     width: 60%;
-    border-radius: 8px;
-    text-align: center;
+    margin: 20px auto;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
 }
 
-/* VIDEO LINK STYLES */
-.video-link {
-    text-decoration: none;
-    display: inline-block;
-    color: inherit; /* Keeps text color same as site */
-}
-
-/* IMAGE CONTAINER */
 .image-box {
     position: relative;
     width: 250px;
-    margin: 20px auto;
-    overflow: hidden; /* Keeps the zoom inside the box */
+    margin: auto;
+    overflow: hidden;
     border-radius: 15px;
-    cursor: pointer;
 }
 
-/* IMAGE */
 .image-box img {
     width: 100%;
-    display: block;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
+    transition: 0.3s;
 }
 
-/* HOVER ZOOM */
 .image-box:hover img {
     transform: scale(1.1);
 }
 
-/* TEXT OVERLAY */
 .overlay {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(107, 45, 45, 0.85); /* Matches header color but transparent */
+    width: 100%;
+    background: rgba(107,45,45,0.8);
     color: white;
-    text-align: center;
-    padding: 15px;
+    padding: 10px;
     opacity: 0;
     transition: 0.3s;
-    border-radius: 0 0 15px 15px;
-    font-size: 14px;
+    font-size: 13px;
+    text-align: center;
 }
 
-/* SHOW TEXT ON HOVER */
 .image-box:hover .overlay {
     opacity: 1;
 }
 
-
-.menubutton, .learnbutton {
-    cursor: pointer;
-    margin-right: 15px;
+button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #6b2d2d;
+    color: white;
+    border: none;
 }
 
-.contactbutton {
+button:hover {
+    background-color: #d4a373;
     cursor: pointer;
 }
 
-a {
-    text-decoration: none;
-    display: inline-block;
+.mainimg {
+    width: 400px;
+    display: block;
+    margin: 20px auto;
 }
 
 footer {
@@ -131,6 +118,32 @@ footer {
     padding: 15px;
 }
 
-.mainimg{
-    width:400px;
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .mainimg {
+        width: 90%;
+    }
+
+    .image-box {
+        width: 90%;
+    }
+}
+
+.contactform {
+    margin: 20px auto;
+    width: 70%;
+}
+
+.contactinfo {
+    margin: 20px auto;
+    width: 60%;
+    text-align: center;
 }

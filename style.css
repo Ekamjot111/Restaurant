@@ -17,6 +17,22 @@ header {
     padding: 15px;
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+}
+
+
+.logo {
+    position: absolute;
+    left: 30px;
+    width: 90px; 
+    height: auto;
+}
+
 nav {
     border-bottom: 2px solid #d4a373;
 }
@@ -172,3 +188,5 @@ footer {
         width: 90%;
     }
 }
+
+

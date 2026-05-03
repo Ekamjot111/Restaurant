@@ -1,15 +1,18 @@
+/* Makes page take full screen height */
 html, body {
     height: 100%;
 }
 
+/* Main body styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family: Arial, sans-serif; /* text style */
+    margin: 0; /* removes default spacing */
     background-color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* stacks content vertically */
 }
 
+/* Header section */
 header {
     background-color: #6b2d2d;
     color: white;
@@ -17,6 +20,7 @@ header {
     padding: 15px;
 }
 
+/* Holds logo + title together */
 .header-container {
     display: flex;
     align-items: center;
@@ -25,47 +29,54 @@ header {
     gap: 10px;
 }
 
-
+/* Logo image */
 .logo {
     position: absolute;
     left: 30px;
-    width: 90px; 
+    width: 90px;
     height: auto;
 }
 
+/* Navigation bar */
 nav {
     border-bottom: 2px solid #d4a373;
 }
 
+/* Navigation list */
 nav ul {
     display: flex;
     justify-content: center;
-    list-style: none;
+    list-style: none; /* removes bullet points */
     padding: 0;
 }
 
+/* Navigation links */
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
 }
 
+/* Hover effect for nav links */
 nav a:hover {
     color: #d4a373;
 }
 
+/* Main page content */
 main {
-    flex: 1;
+    flex: 1; /* pushes footer down */
     padding: 20px;
     text-align: center;
 }
 
+/* Hero section */
 .hero {
     background-color: #d4a373;
     color: white;
     padding: 40px;
 }
 
+/* Card boxes */
 .card {
     width: 60%;
     margin: 20px auto;
@@ -74,6 +85,7 @@ main {
     border-radius: 10px;
 }
 
+/* Image container */
 .image-box {
     position: relative;
     width: 250px;
@@ -82,15 +94,18 @@ main {
     border-radius: 15px;
 }
 
+/* Images inside image-box */
 .image-box img {
     width: 100%;
     transition: 0.3s;
 }
 
+/* Zoom image on hover */
 .image-box:hover img {
     transform: scale(1.1);
 }
 
+/* Overlay text on image */
 .overlay {
     position: absolute;
     bottom: 0;
@@ -99,20 +114,22 @@ main {
     color: white;
     padding: 10px;
 
-    opacity: 0;
+    opacity: 0; /* hidden by default */
     transition: 0.3s;
 
-    font-size: 13px;        /* smaller text */
-    line-height: 1.4;       /* better spacing */
+    font-size: 13px;
+    line-height: 1.4;
     text-align: center;
 
-    box-sizing: border-box; /* keeps padding inside */
+    box-sizing: border-box;
 }
 
+/* Show overlay on hover */
 .image-box:hover .overlay {
     opacity: 1;
 }
 
+/* Buttons */
 button {
     margin: 10px;
     padding: 10px;
@@ -121,17 +138,20 @@ button {
     border: none;
 }
 
+/* Button hover */
 button:hover {
     background-color: #d4a373;
     cursor: pointer;
 }
 
+/* Main homepage image */
 .mainimg {
     width: 400px;
     display: block;
     margin: 20px auto;
 }
 
+/* Footer */
 footer {
     background-color: #6b2d2d;
     color: white;
@@ -139,54 +159,62 @@ footer {
     padding: 15px;
 }
 
+/* Google form area */
 .contactform {
     margin: 20px auto;
     width: 70%;
 }
 
+/* Contact info box */
 .contactinfo {
     margin: 20px auto;
     width: 60%;
     text-align: center;
 }
 
+/* Headings inside cards */
 .card h3 {
     color: #6b2d2d;
 }
 
+/* Paragraph spacing inside cards */
 .card p {
     margin: 5px;
 }
 
+/* Slight zoom when hovering over cards */
 .card:hover {
     transform: scale(1.02);
     transition: 0.2s;
 }
 
-/* 📱 RESPONSIVE */
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
 
+    /* Stack nav links vertically */
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
 
+    /* Bigger clickable nav area */
     nav a {
         display: block;
         padding: 8px 0;
     }
 
+    /* Wider cards on mobile */
     .card {
         width: 90%;
     }
 
+    /* Resize main image */
     .mainimg {
         width: 90%;
     }
 
+    /* Resize image boxes */
     .image-box {
         width: 90%;
     }
 }
-
-
